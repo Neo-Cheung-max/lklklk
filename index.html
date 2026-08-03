@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微软与Windows进化史 | 科技编年史</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,微软雅黑,sans-serif;}
+        body{background:#f8fafc;color:#1e293b;line-height:1.6;}
+        .container{max-width:1000px;margin:0 auto;padding:20px;}
+        
+        /* 头部样式 */
+        header{background:#0078d4;color:#fff;padding:60px 20px;text-align:center;margin-bottom:40px;border-radius:0 0 20px 20px;}
+        header h1{font-size:36px;margin-bottom:10px;}
+        header p{font-size:18px;opacity:0.9;}
+
+        /* 分区标题样式 */
+        .section-title{font-size:28px;color:#0078d4;margin:40px 0 20px;padding-bottom:10px;border-bottom:3px solid #0078d4;display:inline-block;}
+        .section-desc{margin-bottom:30px;font-size:16px;color:#475569;}
+
+        /* 时间轴/卡片样式 */
+        .timeline{position:relative;padding-left:30px;border-left:3px solid #cbd5e1;}
+        .timeline-item{position:relative;margin-bottom:30px;padding-left:20px;}
+        .timeline-item::before{content:'';position:absolute;left:-38px;top:5px;width:14px;height:14px;background:#0078d4;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px #0078d4;}
+        .timeline-item h3{font-size:20px;color:#0f172a;margin-bottom:5px;}
+        .timeline-item .year{font-size:14px;color:#0078d4;font-weight:bold;margin-bottom:8px;}
+        .timeline-item p{font-size:15px;color:#334155;}
+
+        /* 响应式 */
+        @media(max-width:768px){
+            header h1{font-size:28px;}
+            .section-title{font-size:22px;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>微软与 Windows 进化史</h1>
+        <p>从 MS-DOS 到云原生：一部个人计算的普及史</p>
+    </header>
+
+    <div class="container">
+        <!-- 第一部分：微软公司的起源 -->
+        <h2 class="section-title">一、 微软帝国的起源</h2>
+        <p class="section-desc">1975年，比尔·盖茨与保罗·艾伦创立微软。早期依靠为 Altair 微型计算机开发 BASIC 语言起家，随后抓住了 IBM PC 的机遇，打造了 MS-DOS 操作系统，奠定了其软件霸主的地位。</p>
+
+        <!-- 第二部分：Windows 奠基时代 -->
+        <h2 class="section-title">二、 奠基时代：图形界面的曙光 (1985-1994)</h2>
+        <p class="section-desc">为了让冷冰冰的命令行变得直观，微软推出了运行在 MS-DOS 之上的图形外壳，开启了 PC 普及的序幕。</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">1985</div>
+                <h3>Windows 1.0</h3>
+                <p>首次引入窗口、图标、菜单和鼠标操作，附带计算器、记事本等基础组件，虽不支持窗口重叠，但确立了现代交互雏形。</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1990-1992</div>
+                <h3>Windows 3.0 / 3.1</h3>
+                <p>凭借改进的图形界面、虚拟内存和经典的“扫雷”、“纸牌”游戏取得巨大商业成功，首年销量破200万，让图形界面深入人心。</p>
+            </div>
+        </div>
+
+        <!-- 第三部分：统治时代 -->
+        <h2 class="section-title">三、 统治时代：奠定现代桌面形态 (1995-2006)</h2>
+        <p class="section-desc">这一时期，Windows 确立了至今仍在使用的桌面操作逻辑，并完成了底层内核的革命。</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">1995</div>
+                <h3>Windows 95</h3>
+                <p>划时代的版本！首创“开始菜单”与任务栏，支持即插即用（Plug and Play）和32位计算，发布五周内售出700万份。</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1998</div>
+                <h3>Windows 98</h3>
+                <p>深度集成 Internet Explorer 浏览器，全面支持 USB 设备，是最后一个基于 MS-DOS 的消费级系统。</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2001</div>
+                <h3>Windows XP</h3>
+                <p>将企业级 NT 内核的稳定性与消费级的易用性完美结合。经典的“Luna”蓝绿主题和卓越的兼容性使其统治市场近十年。</p>
+            </div>
+        </div>
+
+        <!-- 第四部分：探索与重塑 -->
+        <h2 class="section-title">四、 探索与重塑：安全、触控与服务化 (2007-2021)</h2>
+        <p class="section-desc">面对移动互联网的冲击和安全威胁，Windows 经历了低谷、救赎与商业模式的彻底转型。</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">2007 / 2009</div>
+                <h3>Vista 与 Windows 7</h3>
+                <p>Vista 引入华丽的 Aero 玻璃特效和 UAC 安全机制，但因性能问题饱受争议；Windows 7 迅速优化体验，被誉为“Vista 本应成为的样子”。</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2012 / 2015</div>
+                <h3>Windows 8 与 Windows 10</h3>
+                <p>Win8 激进取消开始菜单拥抱触控引发抵触；Win10 拨乱反正，确立“Windows 即服务 (WaaS)”模式，通过持续更新统一 PC、平板与手机生态。</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2021</div>
+                <h3>Windows 11</h3>
+                <p>迎来重大视觉革新，采用居中任务栏、圆角设计与柔和色彩。深度集成云原生能力，并引入 WSL 等开发者工具，强调安全与生产力。</p>
+            </div>
+        </div>
+
+        <!-- 第五部分：衍生产品与生态 -->
+        <h2 class="section-title">五、 衍生产品与庞大生态</h2>
+        <p class="section-desc">Windows 早已超越单一操作系统，演变为连接万物与云端的庞大生态基石。</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">企业级基石</div>
+                <h3>Windows NT / Server</h3>
+                <p>专为服务器和工作站设计，提供 Active Directory 域管理、高安全性和微内核架构，是企业 IT 基础设施的绝对核心。</p>
+            </div>
+            <div class="timeline-item">
+                <div class="year">开发者利器</div>
+                <h3>WSL 与 Windows Terminal</h3>
+                <p>Windows Subsystem for Linux 允许在 Windows 上原生运行 Linux 二进制文件；全新终端重构了控制台子系统，拥抱开源与跨平台开发。</p>
+            </div>
+            <div class="timeline-item

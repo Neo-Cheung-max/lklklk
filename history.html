@@ -12,10 +12,9 @@
         header{background:#fff;padding:16px 0;box-shadow:0 1px 3px #ddd;}
         .header-box{display:flex;justify-content:space-between;align-items:center;}
         .logo{font-size:22px;font-weight:bold;color:#0078d4;text-decoration:none;}
-        .back{text-decoration:none;color:#333;font-size:14px;}
-        .back:hover{color:#0078d4;}
         .banner{background:#0078d4;color:#fff;text-align:center;padding:60px 15px;}
         .banner h1{margin-bottom:15px;font-size:34px;}
+        .banner p{font-size:14px; opacity: 0.8;} /* 新增小字样式 */
         main{padding:50px 0;}
         h2{margin:40px 0 20px;color:#0078d4;border-left:4px solid #0078d4;padding-left:10px;font-size:22px;}
         .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:30px;}
@@ -25,6 +24,27 @@
         .card p{color:#555;font-size:14px;line-height:1.6;flex-grow:1;}
         .card .tag{display:inline-block;background:#e1f0ff;color:#0078d4;font-size:12px;padding:2px 8px;border-radius:4px;margin-bottom:10px;width:fit-content;}
         footer{background:#222;color:#aaa;text-align:center;padding:30px 15px;margin-top:40px;font-size:14px;}
+        
+        /* 底部返回按钮的样式，与主页保持一致 */
+        .btn-back {
+            display: inline-block;
+            background: #fff;
+            color: #0078d4;
+            border: 2px solid #0078d4;
+            text-decoration: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: normal;
+            box-shadow: none;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .btn-back:hover {
+            background: #e1f0ff;
+            transform: translateY(-2px);
+        }
+
         @media(max-width:760px){
             .grid{grid-template-columns:1fr;}
         }
@@ -34,18 +54,15 @@
     <header>
         <div class="wrap header-box">
             <a href="index.html" class="logo">🪟 Windows 操作指南</a>
-            <a href="index.html" class="back">← 返回首页</a>
         </div>
     </header>
     <section class="banner">
         <div class="wrap">
             <h1>微软与 Windows 编年史</h1>
-            <p>从 MS-DOS 到云与 AI 时代，回顾科技巨头的进化之路</p>
+            <p>从 MS-DOS 到云与 AI 时代，回顾科技巨头的进化之路<br>（浏览完卡片后，请在页面底部返回）</p>
         </div>
     </section>
     <main class="wrap">
-        
-        <!-- 分区一：微软公司起源 -->
         <section id="microsoft">
             <h2>微软公司起源 🏢</h2>
             <div class="grid">
@@ -66,8 +83,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- 分区二：Windows 早期探索 -->
         <section id="early-windows">
             <h2>Windows 早期探索 (1985-1994) 🖥️</h2>
             <div class="grid">
@@ -88,8 +103,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- 分区三：桌面王朝与互联网 -->
         <section id="desktop-empire">
             <h2>桌面王朝与互联网 (1995-2001) 🌐</h2>
             <div class="grid">
@@ -110,8 +123,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- 分区四：现代 Windows 与衍生生态 -->
         <section id="modern-windows">
             <h2>现代 Windows 与衍生生态 🎮</h2>
             <div class="grid">
@@ -147,7 +158,11 @@
                 </div>
             </div>
         </section>
-
+        
+        <!-- 修改后的底部返回按钮 -->
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="index.html" class="btn-back">← 返回主页</a>
+        </div>
     </main>
     <footer>
         &copy; 2026 Windows 操作指南 | neo<br>

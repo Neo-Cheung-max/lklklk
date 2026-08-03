@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Windows 历史</title>
-<style>
+    <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,微软雅黑;}
         body{background:#f1f5f9;color:#222;min-height:100vh;display:flex;flex-direction:column;}
         .banner{background:#0078d4;color:#fff;text-align:center;padding:100px 15px 80px;}
         .banner h1{font-size:42px;margin-bottom:15px;letter-spacing:1px;}
         .banner p{font-size:18px;opacity:0.9;max-width:600px;margin:0 auto;line-height:1.6;}
-        .entry{flex:1;display:flex;justify-content:center;align-items:center;padding:40px 15px;}
-        .btn{display:inline-block;background:#0078d4;color:#fff;text-decoration:none;padding:16px 40px;border-radius:50px;font-size:18px;font-weight:bold;box-shadow:0 4px 15px rgba(0,120,212,0.3);transition:0.3s;}
+        .entry{flex:1;display:flex;flex-direction: column; justify-content:center;align-items:center;padding:40px 15px; gap: 20px;}
+        .btn{display:inline-block;background:#0078d4;color:#fff;text-decoration:none;padding:16px 40px;border-radius:50px;font-size:18px;font-weight:bold;box-shadow:0 4px 15px rgba(0,120,212,0.3);transition:0.3s; text-align: center;}
         .btn:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,120,212,0.4);background:#006cbd;}
+        
+        /* 修改后的返回按钮样式 */
+        .btn-back {
+            background: #fff;
+            color: #0078d4;
+            border: 2px solid #0078d4;
+            box-shadow: none;
+            font-weight: normal;
+            font-size: 16px;
+            padding: 14px 30px;
+        }
+        .btn-back:hover {
+            background: #e1f0ff;
+            transform: translateY(-2px);
+        }
+
         footer{background:#222;color:#aaa;text-align:center;padding:20px;font-size:13px;margin-top:auto;}
         @media(max-width:600px){
             .banner h1{font-size:30px;}
@@ -25,10 +41,11 @@
     <section class="banner">
         <h1>🪟 Windows 历史</h1>
         <p>本站致力于提供 Windows 历史回顾。<br>非微软官方，仅供学习交流。</p>
-<br>Windows系为微软所属产品，微软公司具有知识产权。</p>
-</section>
+    </section>
+    
     <div class="entry">
         <a href="history.html" class="btn">📜 查看微软与 Windows 编年史 →</a>
+        <a href="https://gu-ecf.pages.dev/" class="btn btn-back">← 返回主站</a>
     </div>
 
     <footer>

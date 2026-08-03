@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 历史馆 - 致敬经典</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            margin: 0; padding: 0;
+            background-color: #121212; color: #e0e0e0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(90deg, #0078d7, #005a9e);
+            color: white; padding: 40px 0; text-align: center;
+        }
+        h1 { margin: 0; font-size: 2.5em; }
+        p.subtitle { margin: 10px 0 0; opacity: 0.9; font-size: 1.2em; }
+        .container { width: 80%; max-width: 900px; margin: 40px auto; }
+        
+        /* 时间轴核心样式 */
+        .timeline { position: relative; padding: 20px 0; }
+        .timeline::before {
+            content: ''; position: absolute; left: 50%; top: 0; bottom: 0;
+            width: 4px; background: #0078d7; transform: translateX(-50%);
+        }
+        .event {
+            position: relative; width: 50%; padding: 20px; box-sizing: border-box;
+        }
+        .event.left { left: 0; text-align: right; padding-right: 50px; }
+        .event.right { left: 50%; text-align: left; padding-left: 50px; }
+        
+        /* 节点圆点 */
+        .event::before {
+            content: ''; position: absolute; top: 30px; width: 20px; height: 20px;
+            background: #0078d7; border-radius: 50%; border: 4px solid #121212; z-index: 1;
+        }
+        .event.left::before { right: -10px; }
+        .event.right::before { left: -10px; }
+        
+        .event-card {
+            background: #1e1e1e; padding: 20px; border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s;
+        }
+        .event-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,120,215,0.3); }
+        .year { font-size: 1.5em; color: #0078d7; font-weight: bold; margin-bottom: 5px; }
+        .title { font-size: 1.2em; margin-bottom: 8px; }
+        .desc { font-size: 0.9em; color: #aaa; }
+
+        footer { text-align: center; padding: 30px; background: #000; margin-top: 40px; font-size: 0.9em; color: #666; }
+        
+        /* 响应式：手机端时间轴变单列 */
+        @media (max-width: 768px) {
+            .timeline::before { left: 20px; }
+            .event { width: 100%; padding-left: 60px; padding-right: 20px; text-align: left !important; }
+            .event.left, .event.right { left: 0; }
+            .event::before { left: 10px !important; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>️ Windows 历史馆</h1>
+        <p class="subtitle">从 MS-DOS 到 Windows 11，回顾改变世界的图形界面</p>
+    </div>
+</header>
+
+<div class="container">
+    <div class="timeline">
+        <div class="event left">
+            <div class="event-card">
+                <div class="year">1985</div>
+                <div class="title">Windows 1.0</div>
+                <div class="desc">微软发布第一代图形用户界面，虽然只是 MS-DOS 上的一个外壳，但开启了 PC 图形化时代。</div>
+            </div>
+        </div>
+        <div class="event right">
+            <div class="event-card">
+                <div class="year">1995</div>
+                <div class="title">Windows 95</div>
+                <div class="desc">划时代的里程碑！首次引入“开始”菜单、任务栏和“即插即用”功能，彻底改变了人们使用电脑的方式。</div>
+            </div>
+        </div>
+        <div class="event left">
+            <div class="event-card">
+                <div class="year">2001</div>
+                <div class="title">Windows XP</div>
+                <div class="desc">经典的“Bliss”蓝天草地壁纸。XP 融合了 NT 架构的稳定性与 9x 的易用性，成为一代人的青春记忆。</div>
+            </div>
+        </div>
+        <div class="event right">
+            <div class="event-card">
+                <div class="year">2007</div>
+                <div class="title">Windows Vista</div>
+                <div class="desc">引入华丽的 Aero 毛玻璃特效，虽然因硬件要求高饱受争议，但其底层的安全架构为现代 Windows 奠定了基础。</div>
+            </div>
+        </div>
+        <div class="event left">
+            <div class="event-card">
+                <div class="year">2009</div>
+                <div class="title">Windows 7</div>
+                <div class="desc">修复了 Vista 的臃肿，带来了极致的流畅与稳定。被无数用户誉为“最完美的 Windows 版本”。</div>
+            </div>
+        </div>
+        <div class="event right">
+            <div class="event-card">
+                <div class="year">2015</div>
+                <div class="title">Windows 10</div>
+                <div class="desc">微软宣布“Windows 即服务（WaaS）”，取消了 Windows 9，带来 Edge 浏览器和 Cortana，走向跨平台大一统。</div>
+            </div>
+        </div>
+        <div class="event left">
+            <div class="event-card">
+                <div class="year">2021</div>
+                <div class="title">Windows 11</div>
+                <div class="desc">居中任务栏、圆角窗口、支持 Android 应用。全面拥抱 AI 与云原生，开启现代计算新纪元。</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+     Windows 历史馆 | 仅供学习与怀旧交流<br>
+    本网站非微软官方，所有商标归 Microsoft 所有
+</footer>
+
+</body>
+</html>
